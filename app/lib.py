@@ -19,8 +19,4 @@ def search_flat(container, search):
             result.append(flat)
             continue
 
-        if search_lowercased in flat['district'].lower():
-            result.append(flat)
-            continue
-
     return result
