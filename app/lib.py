@@ -8,8 +8,10 @@ def create_flat(rooms, floor, area, price, district):
 
     }
 
+
 def add_flat(container, flat):
     container.append(flat)
+
 
 def search_flat(container, search):
     search_lowercased = search.strip().lower()  # 1. search.strip() 2. (результат search.strip()).lower()
@@ -20,3 +22,12 @@ def search_flat(container, search):
             continue
 
     return result
+
+
+def search_by_price(container, search):
+    result = []
+    for flat in container:
+        if flat['price'] <= search:
+            result.append(flat)
+            continue
+        return result

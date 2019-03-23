@@ -1,4 +1,4 @@
-from app.lib import *
+from app.lib import create_flat, add_flat, search_by_price
 
 flats = []
 
@@ -12,5 +12,5 @@ add_flat(flats, create2)
 add_flat(flats, create3)
 add_flat(flats, create4)
 
-print(flats)
-
+a = search_by_price(flats, 5000000)
+print(a)
